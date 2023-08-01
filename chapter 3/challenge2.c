@@ -1,0 +1,271 @@
+/*Build a Fortune Cookie program that uses either the Chinese
+Zodiac or astrological signs to generate a fortune, a prediction,
+or a horoscope based on the user’s input. More specifically, the
+user may need to input her year of birth, month of birth, and
+day of birth depending on zodiac or astrological techniques
+used. With this information, generate a custom message or
+fortune. You can use the Internet to find more information on
+the Chinese Zodiac or astrology.*/
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main(){
+  int intDay,intMonth,intZodiacNumber;
+
+  printf("*****Western Zodiac*****");
+  printf("\nDay: ");
+  scanf("%d", &intDay);
+  printf("\nMonth: ");
+  scanf("%d", &intMonth);
+
+  if((isdigit(intMonth) == 0 && isdigit(intDay) == 0) && (intMonth >= 1 && intMonth <= 12) && (intDay >= 1 && intDay <= 31)){
+    switch (intMonth){
+      case 1://Jan
+	if(intDay <= 20){
+	  intZodiacNumber = 1;//Capricorn
+	}else{
+	  intZodiacNumber = 2;//Aquarius
+	}
+	break;
+      case 2:
+	//Feb
+	if(intDay <= 29){
+	  if(intDay <= 19){
+	    intZodiacNumber = 2;
+	  }else{
+	    intZodiacNumber = 3;//Pisces
+	  }
+	}
+	break;
+      case 3://Mar
+	if(intDay <= 20){
+	  intZodiacNumber = 3;
+	}else{
+	  intZodiacNumber = 4;//Aries
+	}
+	break;
+      case 4://Apr
+	if(intDay <= 30){
+	  if(intDay <= 20){
+	    intZodiacNumber = 4;
+	  }else{
+	    intZodiacNumber = 5;//Taurus
+	  }
+	}
+	break;
+      case 5://May
+	if(intDay <= 21){
+	  intZodiacNumber = 5;
+	}else{
+	  intZodiacNumber = 6;//Gemini
+	}
+	break;
+      case 6://Jun
+	if(intDay <= 30){
+	  if(intDay <= 21){
+	    intZodiacNumber = 6;
+	  }else{
+	    intZodiacNumber = 7;//Cancer
+	  }
+	}
+	break;
+      case 7://Jul
+	if(intDay <= 23){
+	  intZodiacNumber = 7;
+	}else{
+	  intZodiacNumber = 8;//Leo
+	}
+	break;
+      case 8://Aug
+	if(intDay <= 23){
+	  intZodiacNumber = 8;
+	}else{
+	  intZodiacNumber = 9;//Virgo
+	}
+	break;
+      case 9://Sep
+	if(intDay <= 30){
+	  if(intDay <= 23){
+	    intZodiacNumber = 9;
+	  }else{
+	    intZodiacNumber = 10;//Libra
+	  }
+	}
+	break;
+      case 10://Oct
+	if(intDay <= 23){
+	  intZodiacNumber = 10;
+	}else{
+	  intZodiacNumber =11;//Scorpio
+	}
+	break;
+      case 11://Nov
+	if(intDay <= 30){
+	  if(intDay <= 22){
+	    intZodiacNumber = 11;
+	  }else{
+	    intZodiacNumber = 12;//Sagittarius
+	  }
+	}
+	break;
+      case 12://Dec
+	if(intDay <= 21){
+	  intZodiacNumber = 12;
+	}else{
+	  intZodiacNumber = 1;
+	}
+	break;
+      default:break;
+    }
+  }else{
+    printf("\nThat's not a date\n");
+  }
+  switch (intZodiacNumber){
+    case 1:
+      printf("\nYour Zodiac Is Capricorn\n");
+      printf("\nStrength: excellent, intelligent, practical, reliable, perseverant, generous, optimistic, cute, persistent");
+      printf("\nWeakness: stubborn, lonely, and suspicious");
+      printf("\nSymbol: Goat");
+      printf("\nElement: Earth");
+      printf("\nSign Ruler: Saturn");
+      printf("\nLucky Colors: Brown, Black, Dark Green");
+      printf("\nLucky Number: 4");
+      printf("\nJewelry: Black Jade");
+      printf("\nBest Match: Virgo, Taurus and Pisces\n");
+      break;
+    case 2:
+      printf("\nYour Zodiac Is Aquarius \n");
+      printf("\nStrength: original, tolerant, ideal, calm, friendly, charitable, independent, smart, practical");
+      printf("\nWeakness: changeful, disobedient, liberalistic, hasty, rebel");
+      printf("\nSymbol: Water carrier");
+      printf("\nElement: Air");
+      printf("\nSign Ruler: Uranus");
+      printf("\nLucky Color: Bronze");
+      printf("\nLucky Number: 22");
+      printf("\nJewelry: Black Pearl");
+      printf("\nBest Match: Gemini, Libra and Aquarius\n");
+      break;
+    case 3:
+      printf("\nYour Zodiac Is Pisces \n");
+      printf("\nStrength: conscious, aesthetic, platonic, dedicated, kind, with good temper");
+      printf("\nWeakness: recessive, sentimental, indecisive, unrealistic");
+      printf("\nSymbol: Fish");
+      printf("\nElement: Water");
+      printf("\nSign Ruler: Neptune");
+      printf("Lucky Color: White");
+      printf("Lucky Number: 11");
+      printf("Jewelry: Ivory Stone");
+      printf("Best Match: Scorpio, Cancer and Capricorn\n");
+      break;
+    case 4:
+      printf("\nYour Zodiac Is Aries \n");
+      printf("\nStrength: hopeful, active, energetic, honest, versatile, brave, adventurous, passionate, generous, cheerful, argumentative, curious");
+      printf("\nWeakness: impulsive, naive, self-willed, belligerent, impatient");
+      printf("\nSymbol: Ram");
+      printf("\nElement: Fire");
+      printf("\nSign Ruler: Mars");
+      printf("\nLucky Color: Red");
+      printf("\nLucky Number: 5");
+      printf("\nJewelry: Ruby");
+      printf("\nBest Match: Leo, Sagittarius and Aries\n");
+      break;
+    case 5:
+      printf("\nYour Zodiac Is Taurus \n");
+      printf("\nStrength: romantic, decisive, logical, diligent, ardent, patient, talented in art, perseverant, benevolent");
+      printf("\nWeakness: prejudiced, dependent, stubborn");
+      printf("\nSymbol: Bull");
+      printf("\nElement: Earth");
+      printf("\nSign Ruler: Venus");
+      printf("\nLucky Color: Pink");
+      printf("\nLucky Number: 6");
+      printf("\nJewelry: Emerald, Jade");
+      printf("\nBest Match: Capricorn, Virgo and Taurus\n");
+      break;
+    case 6:
+      printf("\nYour Zodiac Is Gemini \n");
+      printf("\nStrength: multifarious, perspicacious, smart, cheerful, quick-witted, clement, charming");
+      printf("\nWeakness: fickle, gossipy, amphibian");
+      printf("\nSymbol: Twins");
+      printf("\nElement: Air");
+      printf("\nSign Ruler: Mercury");
+      printf("\nLucky Color: Yellow");
+      printf("\nLucky Number: 7");
+      printf("\nJewelry: Opal");
+      printf("\nBest Match: Aquarius, Libra and Gemini\n");
+      break;
+    case 7:
+      printf("\nYour Zodiac Is Cancer \n");
+      printf("\nStrength: with strong sixth sense, subjective, gentle, swift, imaginative, careful, dedicated, perseverant, kind, caring");
+      printf("\nWeakness: greedy, possessive, sensitive, prim");
+      printf("\nSymbol: Crab");
+      printf("\nElement: Water");
+      printf("\nSign Ruler: Moon");
+      printf("\nLucky Color: Green");
+      printf("\nLucky Number: 2");
+      printf("\nJewelry: Pearl");
+      printf("\nBest Match: Pisces, Scorpio and Cancer\n");
+      break;
+    case 8:
+      printf("\nYour Zodiac Is Leo \n");
+      printf("\nStrength: proud, charitable, reflective, loyal and enthusiastic");
+      printf("\nWeakness: arrogant, vainglorious, indulgent, wasteful, willful, and self-complacent");
+      printf("\nSymbol: Lion");
+      printf("\nElement: Fire");
+      printf("\nSign Ruler: Sun");
+      printf("\nLucky Colors: Red, Gold, Yellow");
+      printf("\nLucky Number: 19");
+      printf("\nJewelry: Gold");
+      printf("\nBest Match: Aries, Sagittarius and Leo\n");
+      break;
+    case 9:
+      printf("\nYour Zodiac Is Virgo \n");
+      printf("\nStrength: helping, elegant, perfectionist, modest, practical, clearheaded");
+      printf("\nWeakness: picky, nosey, tortuous, confining");
+      printf("\nSymbol: Virgin maiden");
+      printf("\nElement: Earth");
+      printf("\nSign Ruler: Mercury");
+      printf("\nLucky Color: Gray");
+      printf("\nLucky Number: 7");
+      printf("\nJewelry: Sapphire, Amber");
+      printf("\nBest Match: Sagittarius, Taurus and Gemini\n");
+      break;
+    case 10:
+      printf("\nYour Zodiac Is Libra \n");
+      printf("\nStrength: idealistic, equitable, just, strong social skills, aesthetic, charming, artistic, beautiful, kind-hearted");
+      printf("\nWeakness: hesitant, narcissistic, lazy, perfunctory, freewheeling");
+      printf("\nSymbol: Scales");
+      printf("\nElement: Air");
+      printf("\nSign Ruler: Venus");
+      printf("\nLucky Color: Brown");
+      printf("\nLucky Number: 3");
+      printf("\nJewelry: Coral, Amber");
+      printf("\nBest Match: Aquarius, Gemini and Libra\n");
+      break;
+    case 11:
+      printf("\nYour Zodiac Is Scorpio \n");
+      printf("\nStrength: mysterious, rational, intelligent, independent, intuitive, dedicated, insightful, charming, sensible");
+      printf("\nWeakness: suspicious, fanatical, complicated, possessive, arrogant, self-willed, extreme");
+      printf("\nSymbol: Scorpion");
+      printf("\nElement: Water");
+      printf("\nSign Ruler: Pluto, Mars");
+      printf("\nLucky Colors: Purple, Black");
+      printf("\nLucky Number: 4");
+      printf("\nJewelry: Jasper, Black Crystal");
+      printf("\nBest Match: Cancer, Capricorn and Pisces\n");
+      break;
+    case 12:
+      printf("\nYour Zodiac Is Sagittarius \n");
+      printf("\nStrength: insightful, superior, rational, brave, beautiful, lively, lovely, optimistic");
+      printf("\nWeakness: forgetful, careless, rash");
+      printf("\nSymbol: Archer");
+      printf("\nElement: Fire");
+      printf("\nSign Ruler: Jupiter");
+      printf("\nLucky Color: Light Blue");
+      printf("\nLucky Number: 6");
+      printf("\nJewelry: Amethyst");
+      printf("\nBest Match: Virgo, Leo and Aries\n");
+      break;
+  }
+}
