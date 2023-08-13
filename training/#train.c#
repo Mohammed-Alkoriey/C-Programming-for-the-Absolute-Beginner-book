@@ -1,0 +1,77 @@
+//data types
+
+/*
+ *char
+ *int
+ *short
+ *long
+ *unsigned char
+ *unsigned int
+ *unsigned short
+ *unsigned long
+ */
+//variable
+
+//type name;
+unsigned char sayhi;
+
+//array
+
+//type name[number_of_items];
+int ages[10];
+char names[8][10];
+
+//structures
+
+/*
+ *struct structure_name {
+ *     type name;
+ *     type name;
+ *     type name[number_of_items];
+ * }
+ */
+struct car{
+  char brand[20];
+  char model[20];
+  int date;
+  int hourse_power;
+  char engine[20];
+};
+
+struct car bugatti;
+
+
+//Functions
+
+/*
+ *return_type name(type parameter1, type parameter2, ...)
+ *[block_of_code]
+ */
+
+int addNumbers(int num1, int num2);
+//  [block]
+
+int main(void);
+
+//Block
+
+/*
+ *{
+ *  [declarations(s)]
+ *  [statement(s)]
+ *}
+ */
+
+int addition(int number1,int number2){
+  /*declarations*/
+  int total;
+  int mult;
+  int sum;
+
+  /*statements*/
+  mult = number1 * number2;
+  sum = number1 + nummber2;
+  total = mult + sum;
+  return total;
+}
+
